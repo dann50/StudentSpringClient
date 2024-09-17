@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp"
+    tools:context=".ui.fragments.StudentDisplayFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/editor_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/enter_new_student"
+        android:layout_marginTop="50dp"
+        android:textSize="24sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editor_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/saveBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        android:padding="20dp">
+        
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_barrier"
+            android:layout_marginEnd="@dimen/margin_barrier"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="nameTextView,dob_textView,dept_textView,major_textView" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/nameEditText"
+            app:layout_constraintEnd_toStartOf="@id/barrier"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nameEditText"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:text="@string/name_text" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/padding_small" />
+
+        <TextView
+            android:id="@+id/dob_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/dob_view"
+            android:text="@string/dob_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/dob_view"
+            app:layout_constraintEnd_toStartOf="@+id/barrier" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dob_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/dept_textView"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/padding_small"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/dept_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/dept_editText"
+            android:text="@string/department_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/dept_editText"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dept_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/dob_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/padding_small" />
+
+        <TextView
+            android:id="@+id/major_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/major_editText"
+            android:text="@string/major_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/major_editText"
+            app:layout_constraintEnd_toStartOf="@+id/barrier" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/major_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/dept_editText"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/padding_small" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/padding_large"
+        android:text="@string/save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Base.CardView"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="8dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Rachel Parker"
+        android:textSize="25sp">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dob_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"
+        android:text="@string/date_of_birth_textView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dob_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dob_textView"
+        app:layout_constraintStart_toEndOf="@+id/dob_textView"
+        android:layout_marginStart="8dp"
+        tools:text="11/05/2022"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/deptMajor_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dob_textView"
+        android:layout_marginTop="4dp"
+        android:text="@string/deptMajor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/deptMajor_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/deptMajor_textView"
+        app:layout_constraintStart_toEndOf="@+id/deptMajor_textView"
+        android:layout_marginStart="8dp"
+        android:maxLines="2"
+        android:textStyle="bold"
+        tools:text="Engineering / Computer Engineering" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

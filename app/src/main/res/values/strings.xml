@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Students</string>
+    <string name="date_of_birth_textView">Date of Birth:</string>
+    <string name="deptMajor">Dept. / Major:</string>
+    <string name="enter_new_student">Enter new or edit student</string>
+    <string name="save">SAVE</string>
+    <string name="name_text">Name:</string>
+    <string name="major_text">Major:</string>
+    <string name="department_text">Department:</string>
+    <string name="dob_text">Date of Birth:</string>
+    <string name="deptAndMajorValue">${student.dept} / ${student.major}</string>
+    <string name="add_student">Add Student</string>
+    <string name="loading_text">Loading… \nPlease wait</string>
+    <string name="error_text">Error loading list.\nTap this text to retry</string>
+    <string name="fill_all_fields">Fill in all fields!</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
